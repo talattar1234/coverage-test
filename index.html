@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sensor coverage · Cesium POC</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://cesium.com/downloads/cesiumjs/releases/1.130/Build/Cesium/Widgets/widgets.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.130/Build/Cesium/Cesium.js"></script>
+  <script defer src="sensor.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main id="globe" aria-label="Interactive 3D globe"></main>
+  <aside>
+    <small>CESIUM / GEOMETRY LAB</small>
+    <h1>Sensor coverage</h1>
+    <p>One origin. Two coverage volumes.</p>
+    <form id="controls">
+      <label>Coverage type<select id="type"><option value="cone">Cone</option><option value="pyramid">Rectangular pyramid</option></select></label>
+      <div id="parameters"></div>
+      <fieldset><legend>Appearance</legend>
+        <label class="check"><input id="fill" type="checkbox" checked> Filled surfaces</label>
+        <label class="check"><input id="outline" type="checkbox" checked> Outline / wireframe</label>
+        <label class="color">Coverage color<input id="color" type="color" value="#43d9eb"></label>
+      </fieldset>
+      <details><summary>Sensor position</summary><div id="position"></div></details>
+      <div class="buttons"><button id="focus" type="button">Frame coverage</button><button id="reset" type="button">Reset</button></div>
+    </form>
+    <p class="hint">Heading: clockwise from north. Pitch: positive up. Angles are full FOV. Range is the axial distance to the flat base.</p>
+    <output id="status" aria-live="polite">Loading globe…</output>
+  </aside>
+  <div class="navigation">Drag to orbit · Wheel to zoom · Ctrl + drag to tilt</div>
+</body>
+</html>

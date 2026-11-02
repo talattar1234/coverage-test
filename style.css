@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+html, body, #globe { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { font: 14px/1.4 system-ui, sans-serif; background: #101c29; color: #eaf4ff; }
+aside { position: absolute; top: 16px; left: 16px; width: 310px; max-height: calc(100% - 65px); overflow: auto; padding: 22px; background: #122133f2; border: 1px solid #35495f; border-radius: 12px; box-shadow: 0 12px 40px #0005; }
+small { color: #67dbe7; font-size: 10px; letter-spacing: 2px; }
+h1 { font-size: 24px; margin: 8px 0 3px; }
+p { color: #afc1d4; margin: 0 0 20px; }
+label { display: block; margin: 12px 0; }
+select, input[type=number], button { background: #213449; color: #eef8ff; border: 1px solid #496079; border-radius: 5px; padding: 7px; font: inherit; }
+select { display: block; width: 100%; margin-top: 6px; }
+.parameter { display: grid; grid-template-columns: 1fr 78px; align-items: center; gap: 6px; }
+.parameter input[type=range] { grid-column: 1 / -1; width: 100%; accent-color: #43d9eb; margin: 0; }
+input[type=number] { width: 100%; }
+input:focus-visible, select:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid #43d9eb; outline-offset: 2px; }
+fieldset { border: 0; border-top: 1px solid #35495f; padding: 4px 0; margin-top: 18px; }
+legend, summary { color: #afc1d4; }
+.check { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; margin: 8px 6px 8px 0; }
+input[type=checkbox] { accent-color: #43d9eb; }
+.color { display: flex; justify-content: space-between; align-items: center; }
+input[type=color] { width: 58px; height: 28px; padding: 1px; border: 0; background: none; }
+summary { cursor: pointer; padding: 8px 0; }
+.buttons { display: flex; gap: 8px; margin-top: 16px; }
+button { cursor: pointer; } button:hover { background: #34506a; }
+.hint { font-size: 11px; margin: 15px 0 10px; }
+output { font-size: 12px; color: #67dbe7; }
+.navigation { position: absolute; bottom: 32px; right: 16px; color: #eaf4ff; background: #122133cc; padding: 8px 12px; border-radius: 6px; font-size: 12px; pointer-events: none; }
+[hidden] { display: none !important; }
+@media (max-width: 600px) { aside { width: 260px; padding: 14px; max-height: 57%; top: 8px; left: 8px; } .navigation { display: none; } }
